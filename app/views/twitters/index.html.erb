@@ -1,5 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
+<%= form_with url: twitters_path, method: :get do |form|%>
+ <%= form.text_field :query_text, placeholder: 'Texto a buscar', value: params[:query_text]%>
+ <%= form.submit "Buscar..." %>
+
+<%end%>
+
 <h1>Twitters</h1>
 
 <div id="twitters">
@@ -11,4 +17,7 @@
   <% end %>
 </div>
 
+<%== pagy_bootstrap_nav(@pagy) %> 
+
 <%= link_to "New twitter", new_twitter_path %>
+
