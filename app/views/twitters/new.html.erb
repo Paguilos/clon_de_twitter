@@ -1,9 +1,16 @@
-<h1>New twitter</h1>
 
-<%= render "form", twitter: @twitter %>
+<div class="container">
+  <div class="row">  
+    <div class="col-12"> 
+      <h1>Twittear</h1>
 
-<br>
+          <%= render "form", twitter: @twitter %>
 
-<div>
-  <%= link_to "Back to twitters", twitters_path %>
+          <br>
+
+          <div class="back fs-4">
+            <%= link_to "Back to twitters", twitters_path %>
+          </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,30 @@
+
+.fa-brands{
+color: rgb(29, 155, 240)}
+
+.btn{
+background-color: rgb(29, 155, 240);
+color: white;
+ 
+}
+
+.btn-link {
+    text-decoration: none !important;    
+  }
+
+.link-mostrar{
+color: rgb(29, 155, 240)
+}
+
+.btn-buscador{
+    border: 0;
+}
+
+.pagy{
+    color: rgb(29, 155, 240)
+}
+
+.back{
+    text-decoration: none !important;  
+}
+  

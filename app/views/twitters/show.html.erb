@@ -1,10 +1,34 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @twitter %>
 
-<div>
-  <%= link_to "Edit this twitter", edit_twitter_path(@twitter) %> |
-  <%= link_to "Back to twitters", twitters_path %>
+<div class="container">
+  <div class="row">  
+    <div class="col-3"> 
+        <i class="fa-brands fa-twitter fs-1"></i>
+        <a class="nav-link active text-black fw-bold fs-3 mt-5" aria-current="page" href="twitters#index"><i class="fa-solid fa-house-chimney-window me-1"></i>Inicio</a>
+        <a class="nav-link text-black fs-3 mt-5"> <%= link_to "Edita este twitter", edit_twitter_path(@twitter) %></a>
+        <a class="nav-link text-black fs-3 mt-5"> <%= button_to "Elimina este twitter", @twitter, method: :delete %></a>
+      </nav>             
+    </div>
 
-  <%= button_to "Destroy this twitter", @twitter, method: :delete %>
+    <div class="col-6 align-items-center justify-content-center">    
+      <h1 class="titulo-twitter text-secondary text-center mb-5">Edita este twitter</h1>
+        <%= render @twitter %>
+    </div>
+      
+ 
+
+    <div class="col-3">    
+        <form class="d-flex fs-5" role="search">    
+           <%= form_with url: twitters_path, method: :get do |form|%>             
+              <%= form.text_field :query_text, placeholder: 'Buscar en Twitter', value: params[:query_text]%>
+              <button class="btn-buscador btn-outline-success" type="submit"><%= form.submit "Buscar..." %></button>
+         </form>
+      <%end%>
+        
+    </div>
+  </div>  
 </div>
+
+
+

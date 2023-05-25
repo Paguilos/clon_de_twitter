@@ -1,12 +1,9 @@
-<div id="<%= dom_id twitter %>">
-  <p>
-    <strong>Description:</strong>
-    <%= twitter.description %>
-  </p>
-
-  <p>
-    <strong>Username:</strong>
-    <%= twitter.username %>
-  </p>
-
+<div class="card text-bg-light mb-3 ms-5" style="max-width: 36rem;"> 
+    <div id="<%= dom_id twitter %>">
+       <div class="card-body">  
+          <h5 class="card-title fs-5 fw-5 "><strong></strong><%= twitter.username %></h5>
+          <p class="card-text fs-5"><strong></strong><%= twitter.description %>
+           <p><%= link_to "Mostrar este hilo", twitter, class: "link-mostrar fs-5" %></p>
+       </div>
+    </div>
 </div>
